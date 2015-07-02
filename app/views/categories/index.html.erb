@@ -1,15 +1,23 @@
-<h1>Categories List (with n no. of child)</h1>
-
-<h3>Display menu intro Seperate columns depending on their root nodes</h3>
-
-<%= category_roots.each_slice(1) do |category| %>
-  <div style="display: block; width: 200px; float: left;">
-    <%= tree_view category %>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h2>Display menu intro Seperate columns depending on their root nodes</h2>
   </div>
-<% end %>
+  <div class="panel-body">
+    <%= category_roots.each_slice(1) do |category| %>
+      <div style="display: block; width: 200px; float: left;">
+        <%= tree_view category %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<div style="clear: both;"></div>
-<hr>
-<h3>Display Menu in normal order</h3>
-<%= tree_view category_roots %>
-
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h2>Display Menu in normal order</h2>
+  </div>
+  <div class="panel-body">
+    <div style="display: block; width: 200px; float: left;">
+      <%= tree_view category_roots %>
+    </div>
+  </div>
+</div>

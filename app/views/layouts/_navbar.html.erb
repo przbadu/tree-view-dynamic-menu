@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand">Categories</a>
+  </div>
+
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <!-- display all categories in menus -->
+      <%= category_roots.each_slice(1) do |category| %>
+        <%= nav_view category %>
+      <% end %>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a tabindex="0" data-toggle="dropdown">Setting<span class="caret"></span></a>
+
+        <!-- role="menu": fix moved by arrows (Bootstrap dropdown) -->
+        <ul class="dropdown-menu" role="menu">
+          <li><a tabindex="0">Account</a></li>
+          <li><a tabindex="0">Another menu</a></li>
+          <li class="divider"></li>
+          <li><a tabindex="0">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
