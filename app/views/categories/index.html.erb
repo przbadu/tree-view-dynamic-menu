@@ -1,0 +1,15 @@
+<h1>Categories List (with n no. of child)</h1>
+
+<h3>Display menu intro Seperate columns depending on their root nodes</h3>
+
+<%= category_roots.each_slice(1) do |category| %>
+  <div style="display: block; width: 200px; float: left;">
+    <%= tree_view category %>
+  </div>
+<% end %>
+
+<div style="clear: both;"></div>
+<hr>
+<h3>Display Menu in normal order</h3>
+<%= tree_view category_roots %>
+
